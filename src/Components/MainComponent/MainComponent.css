@@ -1,0 +1,23 @@
+  .Container {
+    flex-Grow: 1;
+  }
+
+  .Icon {
+    color: 'rgba(255, 255, 255, 0.54)';
+  }
+
+  .Tilebar {
+    text-transform: capitalize;
+  }
+
+  .Backdrop {
+    z-Index: 9999;
+    color: '#fff';
+  }
+
+  .Buttongroup-Grid {
+    text-align: end;
+    padding: 2rem 0 2rem 0;
+  }
+
+ 

@@ -1,0 +1,12 @@
+{
+    "count": 1118,
+    "next": "https://pokeapi.co/api/v2/pokemon?offset=100&limit=50",
+    "previous": "https://pokeapi.co/api/v2/pokemon?offset=0&limit=50",
+    "results": [
+     
+        {
+            "name": "persian",
+            "url": "https://pokeapi.co/api/v2/pokemon/53/"
+        } 
+    ]
+}
