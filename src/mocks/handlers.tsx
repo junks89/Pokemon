@@ -1,5 +1,4 @@
 // src/mocks/handlers.js
-import { debug } from 'console';
 import { rest } from 'msw' 
 import pokemonListShortResult1 from './pokemonListShortResult1.json';
 import pokemonListShortResult2 from './pokemonListShortResult2.json';

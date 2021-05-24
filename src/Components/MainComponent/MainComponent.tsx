@@ -13,7 +13,7 @@ import {
 import logo from '../../Assets/Pokemon_logo.png';
 import ProgressiveImage from "react-progressive-image";
 import VisibilityIcon from '@material-ui/icons/Visibility';
-import React, { useState, useEffect } from "react";
+import React from "react";
 import withWidth from "@material-ui/core/withWidth";
 import { Pokemon, PokemonList } from "../../Models/PokemonList";
 import { notify } from "../Notifier/Notifier";
@@ -63,7 +63,7 @@ class MainComponent extends React.Component<Props, State> {
 
 
 
-  componentDidMount() { 
+  componentDidMount() {
     fetchList(Baseurl, { cancelToken: source.token }).then(
       (response: PokemonList) => {
         this.setState({ pokemonList: response, backdropShow: false });
@@ -178,26 +178,18 @@ class MainComponent extends React.Component<Props, State> {
     }
 
     let backButton = null;
-    let backButtonFooter = null;
     if (this.state.pokemonList.previous) {
-      backButton = (< Button   id="backButton"onClick={() => this.handlePreviousPage()} > back </Button>);
-      backButtonFooter = (< Button id="backButtonFooter"onClick={() => this.handlePreviousPage()} > back </Button>);
+      backButton = (< Button id="backButton" onClick={() => this.handlePreviousPage()} > back </Button>);
     }
     let nextButton = null;
-    let nextButtonFooter = null;
     if (this.state.pokemonList.next) {
-      nextButton = (<Button   data-testid="nextButton"   id="nextButton" onClick={() => this.handleNextPage()} > next </Button>);
-      nextButtonFooter = (<Button id="nextButtonFooter" onClick={() => this.handleNextPage()} > next </Button>);
+      nextButton = (<Button data-testid="nextButton" id="nextButton" onClick={() => this.handleNextPage()} > next </Button>);
     }
     let page = null;
-    let pageFooter = null;
     if (!this.state.backdropShow) {
       page = (<Grid id="page" item xs={2}>
         Page {this.state.offset ? Math.ceil(this.state.offset / 50) : "1"}/{this.state.pokemonList.count ? Math.ceil(this.state.pokemonList.count / 50) : "*"}
-      </Grid>)
-      pageFooter = (<Grid id="pageFooter" item xs={2}>
-        Page {this.state.offset ? Math.ceil(this.state.offset / 50) : "1"}/{this.state.pokemonList.count ? Math.ceil(this.state.pokemonList.count / 50) : "*"}
-      </Grid>)
+      </Grid>) 
     }
 
     return (

@@ -1,8 +1,7 @@
 import React from 'react';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Dialog, { DialogProps } from '@material-ui/core/Dialog';
-import { AppBar, Box, Button, DialogActions, DialogContent, DialogContentText, Grid, Tab, Tabs, Typography } from '@material-ui/core';
-import Paper from '@material-ui/core/Paper';
+import { AppBar, Box, Button, DialogActions, DialogContent, Grid, Tab, Tabs, Typography } from '@material-ui/core';
 import { PokemonDetails, Types, Stats, Move } from '../../Models/PokemonDetails';
 import { SelectedPokemonAbilities } from '../../Models/PokemonAbility';
 import { EvolutionResponse } from '../../Models/PokemonEvolution';
@@ -81,7 +80,7 @@ export function Details(props: DetailsProps) {
           <Grid item xs={8}>
             <AppBar position="relative" color="inherit">
 
-              <Tabs value={value}  variant="scrollable" scrollButtons="on" onChange={handleChange} aria-label="simple tabs example">
+              <Tabs value={value} variant="scrollable" scrollButtons="on" onChange={handleChange} aria-label="simple tabs example">
                 <Tab label="Abilities" />
                 <Tab label="Stats" />
                 <Tab label="Moves" />
